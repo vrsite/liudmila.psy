@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Людмила Свитко - Психолог, КПТ-консультант</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header and Navigation -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <!-- Логотип удалён по запросу -->
+        <ul class="nav-links" id="primary-menu" role="menu" aria-label="Основне меню">
+          <li><a href="#about" role="menuitem" tabindex="-1">Про мене</a></li>
+          <li><a href="#services" role="menuitem" tabindex="-1">Консультація</a></li>
+          <li><a href="#education" role="menuitem" tabindex="-1">Освіта</a></li>
+          <li><a href="#faq" role="menuitem" tabindex="-1">FAQ</a></li>
+          <li><a href="#blog" role="menuitem" tabindex="-1">Блог</a></li>
+          <li><a href="#appointment" role="menuitem" tabindex="-1">Записатися</a></li>
+          <li><a href="#contact" role="menuitem" tabindex="-1">Контакти</a></li>
+          <!-- Соц. иконки для мобильного меню -->
+          <li class="mobile-socials">
+            <a href="https://www.instagram.com/svitkoliudmila.psy" target="_blank" aria-label="Instagram" tabindex="-1">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://t.me/liudmilamoremne" target="_blank" aria-label="Telegram" tabindex="-1">
+              <i class="fab fa-telegram-plane"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu" type="button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-image"></div>
+    <div class="hero-content">
+      <h1 class="hero-name">Людмила Свитко</h1>
+      <p class="hero-title">Психолог, КПТ-консультант</p>
+      <p class="hero-quote">Ваш простір для спокою, що дарує тишу, коли світ надто гучний.</p>
+      <button class="cta-button" onclick="window.location.href='#appointment'">Записатися на консультацію</button>
+    </div>
+  </section>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">Про мене</h2>
+        <div class="about-flex">
+          <div class="about-text-main custom-frame">
+            <p>Мене звати Людмила. Я — психолог і КПТ-консультант. Психологія стала моїм свідомим вибором і другою вищою освітою. В 25 років я зіткнулася з власними викликами і настільки захопилася напрямком когнітивно-поведінкової терапії, що вже не могла зупинитися. Я знаю на власному досвіді, як може бути важко всередині, попри зовнішню молодість та, здавалося б, безліч причин для щастя.</p>
+            <p>Тому для мене психологія — це не просто професія, а прагнення допомагати тим, кому щось заважає жити своє життя повноцінно.</p>
+            <p>Мій основний напрямок роботи — це <b>когнітивно-поведінкова терапія (КПТ)</b>. Це офіційно визнаний та один із найефективніших підходів у психології, що є золотим стандартом у роботі з тривожними розладами та депресією. Його суть у тому, що не сама ситуація формує наші емоційні реакції, а наше ставлення до неї. КПТ — это про відповідальність, плідну роботу та самоаналіз.</p>
+          </div>
+          <div class="about-image-container-main">
+            <img src="images/about-1.jpg" alt="Людмила Свитко" class="about-img">
+          </div>
+        </div>
+
+        <div class="about-issues-container">
+          <div class="about-image-container-issues">
+            <img src="images/about-2.jpg" alt="Людмила Свитко" class="about-img">
+          </div>
+          <div class="about-issues-text">
+            <h3 class="issues-heading">Я працюю з клієнтами, які мають такі труднощі:</h3>
+            <div class="issues-list-wrapper">
+              <ul class="animated-issues-list">
+                <li class="animated-list-item"><i class="fas fa-check"></i> невпевненість</li>
+                <li class="animated-list-item"><i class="fas fa-check"></i> тривожні стани</li>
+                <li class="animated-list-item"><i class="fas fa-check"></i> депресія</li>
+                <li class="animated-list-item"><i class="fas fa-check"></i> соціальна фобія</li>
+                <li class="animated-list-item"><i class="fas fa-check"></i> проблеми із самооцінкою</li>
+                <li class="animated-list-item"><i class="fas fa-check"></i> психосоматичні прояви</li>
+                <li class="animated-list-item"><i class="fas fa-check"></i> перфекціонізм</li>
+                <li class="animated-list-item"><i class="fas fa-check"></i> проблеми адаптації</li>
+                <li class="animated-list-item"><i class="fas fa-check"></i> труднощі з прийняттям рішень</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title">Освіта та кваліфікація</h2>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <div class="diploma-card" data-diploma="1">
+              <img src="images/obrazovanie1.jpg" alt="Диплом магістра" class="diploma-img">
+              <div class="diploma-overlay">
+                <h3>Диплом магістра</h3>
+                <button class="view-details-btn">Детальніше</button>
+              </div>
+            </div>
+            <div class="diploma-card" data-diploma="2">
+              <img src="images/obrazovanie2.jpg" alt="Сертифікат Діагностика та образно-тілесна терапія (1)" class="diploma-img">
+              <div class="diploma-overlay">
+                <h3>Сертифікат по психосоматиці</h3>
+                <button class="view-details-btn">Детальніше</button>
+              </div>
+            </div>
+            <div class="diploma-card" data-diploma="3">
+              <img src="images/obrazovanie4.jpg" alt="Сертифікат Діагностика та образно-тілесна терапія (2)" class="diploma-img">
+              <div class="diploma-overlay">
+                <h3>Сертифікат по КПТ</h3>
+                <button class="view-details-btn">Детальніше</button>
+              </div>
+            </div>
+            <div class="diploma-card" data-diploma="4">
+              <img src="images/obrazovanie3.jpg" alt="Сертифікат КПТ+" class="diploma-img">
+              <div class="diploma-overlay">
+                <h3>Сертифікат «КПТ+»</h3>
+                <button class="view-details-btn">Детальніше</button>
+              </div>
+            </div>
+            <div class="diploma-card" data-diploma="5">
+              <img src="images/obrazovanie5.jpg" alt="Сертифікат від ЮНЕСКО" class="diploma-img">
+              <div class="diploma-overlay">
+                <h3>Сертифікат від ЮНЕСКО</h3>
+                <button class="view-details-btn">Детальніше</button>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for diplomas -->
+    <div id="diploma-modal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <span class="close-btn" aria-label="Close">&times;</span>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- Consultation Section -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Консультація та умови співпраці</h2>
+        <div class="services-content-flex">
+          <div class="services-text custom-frame">
+            <p>Перша консультація — це наше знайомство. Ми обговоримо ваш запит і визначимося, чи підходить вам мій підхід і чи готові ви довіритися мені. Це можливість для вас безкоштовно зрозуміти, як відбувається робота та які кроки ми можемо зробити разом.</p>
+            <p>Після першої зустрічі я запропоную вам індивідуальний курс консультацій, адаптований під ваш запит. Умови курсу, тривалість і вартість ми обговоримо і зафіксуємо після першої зустрічі.</p>
+            <div class="services-list">
+              <div class="service-item">
+                <i class="fas fa-clock"></i>
+                <p><b>Тривалість консультації:</b> 60 хвилин.</p>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-desktop"></i>
+                <p><b>Формат:</b> Онлайн, у додатку Zoom або іншим зручним для вас способом.</p>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-book-open"></i>
+                <p><b>Домашні завдання:</b> Це частина роботи в напрямку КПТ, але це не школа, де вас каратимуть за невиконання. Найважливіше — це ваша усвідомленість та бажання працювати.</p>
+              </div>
+            </div>
+          </div>
+          <div class="services-image-container">
+            <img src="images/konsultac.jpg" alt="Консультаційний процес" class="consultation-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+      <div class="container">
+        <h2 class="section-title">Поширені запитання (FAQ)</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Чи можу я отримати консультацію, якщо перебуваю в іншій країні?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Так, звісно. Я проводжу онлайн-консультації незалежно від вашого місцезнаходження. Все, що вам потрібно, — це стабільне інтернет-з'єднання і зручне, безпечне місце, де ви зможете говорити без перешкод. Ми узгодимо графік, враховуючи різницю в часі, щоб знайти найкомфортніший для вас варіант. Конфіденційність та професійна етика залишаються незмінними, де б ви не знаходились.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Як відбувається оплата?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Перша консультація є безкоштовною. Після неї ми обговоримо умови та вартість індивідуального курсу, якщо ви вирішите продовжити роботу. Оплата курсу здійснюється зручним для вас способом, який ми узгодимо.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Чим КПТ відрізняється від інших видів терапії?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>КПТ — це структурований, орієнтований на результат підхід. На відміну від деяких інших методів, КПТ зосереджується на вирішенні поточних проблем. Ми будемо працювати над тим, як ваші думки та переконання впливають на емоції та поведінку.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Скільки сеансів мені знадобиться?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Тривалість терапії дуже індивідуальна і залежить від вашого запиту та цілей. КПТ зазвичай вважається короткостроковою терапією, яка може тривати від кількох тижнів до кількох місяців. Ми обговоримо це на першій консультації.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Що таке конфіденційність у терапії?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Уся інформація, якою ви ділитеся зі мною, є суворо конфіденційною. Наша розмова не буде розголошена нікому, за винятком випадків, передбачених законодавством (наприклад, якщо існує загроза життю). Дотримання етики є для мене пріоритетом.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Чи потрібно якось готуватися до першого сеансу?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Спеціальної підготовки не потрібно. Просто підготуйтеся розказати про те, що вас турбує, і що б ви хотіли змінити у своєму житті.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+      <div class="container">
+        <h2 class="section-title">Блог / Корисні матеріали</h2>
+        <div class="blog-grid">
+            <article class="blog-post" data-blog="1">
+                <h3><a href="#">Тревога: як повернути собі контроль над життям. 3 ефективні техніки КПТ</a></h3>
+                <p>У сучасному світі тривога стала настільки поширеною, що ми часто сприймаємо її як нормальну частину життя...</p>
+                <button class="read-more-btn">Читати далі <i class="fas fa-arrow-right"></i></button>
+            </article>
+            <article class="blog-post" data-blog="2">
+                <h3><a href="#">Перфекціонізм: чому це не про ідеал, а про страх помилок</a></h3>
+                <p>Часто ми чуємо, як люди з гордістю говорять: «Я перфекціоніст». Це слово асоціюється з високими стандартами, досконалістю та успіхом...</p>
+                <button class="read-more-btn">Читати далі <i class="fas fa-arrow-right"></i></button>
+            </article>
+            <article class="blog-post" data-blog="3">
+                <h3><a href="#">Коли тіло говорить те, що мовчить душа: як емоції впливають на наше здоров'я</a></h3>
+                <p>Чи помічали ви, що після стресового дня у вас починає боліти голова? Це психосоматика — прямий зв’язок між нашим емоційним станом і фізичним самопочуттям...</p>
+                <button class="read-more-btn">Читати далі <i class="fas fa-arrow-right"></i></button>
+            </article>
+            <article class="blog-post" data-blog="4">
+                <h3><a href="#">Пастка невирішеності: як навчитися приймати рішення без страху</a></h3>
+                <p>Відчуття паралічу перед важливим вибором — це поширена проблема, яка заважає нам рухатися вперед...</p>
+                <button class="read-more-btn">Читати далі <i class="fas fa-arrow-right"></i></button>
+            </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for blog posts -->
+    <div id="blog-modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body-blog">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointment Section (New) -->
+    <section id="appointment" class="section">
+        <div class="container">
+            <h2 class="section-title">Записатися на консультацію</h2>
+            <div class="appointment-form-container">
+                <form id="appointment-form" class="appointment-form">
+                    <p class="appointment-intro">Зробіть перший крок до змін. Заповніть форму, і я зв'яжусь з вами найближчим часом.</p>
+                    <div class="form-group">
+                        <label for="appointment-name">Ваше ім'я</label>
+                        <input type="text" id="appointment-name" name="name" placeholder="Ім'я" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-email">Електронна пошта</label>
+                        <input type="email" id="appointment-email" name="email" placeholder="Електронна пошта" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-phone">Телефон</label>
+                        <input type="tel" id="appointment-phone" name="phone" placeholder="Телефон" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-message">Повідомлення</label>
+                        <textarea id="appointment-message" name="message" rows="4" placeholder="Коротко опишіть ваш запит"></textarea>
+                    </div>
+                    <button type="submit" class="appointment-submit-btn">Відправити запит</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Контакти</h2>
+        <p class="contact-intro">Запрошую вас на першу безкоштовну консультацію, що проходить в атмосфері довіри та розуміння.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+380938341822">+380938341822</a>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-telegram-plane"></i>
+            <a href="https://t.me/liudmilamoremne" target="_blank">@liudmilamoremne</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:svitkoliuda747@gmail.com">svitkoliuda747@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-instagram"></i>
+            <a href="https://www.instagram.com/svitkoliudmila.psy" target="_blank">@svitkoliudmila.psy</a>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-tiktok"></i>
+            <a href="https://www.tiktok.com/@svitkoliudmila.psy" target="_blank">@svitkoliudmila.psy</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Людмила Свитко. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
