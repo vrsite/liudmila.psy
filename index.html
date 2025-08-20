@@ -9,11 +9,9 @@
 </head>
 <body>
 
-  <!-- Header and Navigation -->
   <header class="header">
     <div class="container">
       <nav class="nav">
-        <!-- Логотип удалён по запросу -->
         <ul class="nav-links" id="primary-menu" role="menu" aria-label="Основне меню">
           <li><a href="#about" role="menuitem" tabindex="-1">Про мене</a></li>
           <li><a href="#services" role="menuitem" tabindex="-1">Консультація</a></li>
@@ -22,7 +20,6 @@
           <li><a href="#blog" role="menuitem" tabindex="-1">Блог</a></li>
           <li><a href="#appointment" role="menuitem" tabindex="-1">Записатися</a></li>
           <li><a href="#contact" role="menuitem" tabindex="-1">Контакти</a></li>
-          <!-- Соц. иконки для мобильного меню -->
           <li class="mobile-socials">
             <a href="https://www.instagram.com/svitkoliudmila.psy" target="_blank" aria-label="Instagram" tabindex="-1">
               <i class="fab fa-instagram"></i>
@@ -40,7 +37,6 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section id="hero" class="hero">
     <div class="hero-image"></div>
     <div class="hero-content">
@@ -52,7 +48,6 @@
   </section>
 
   <main>
-    <!-- About Section -->
     <section id="about" class="section">
       <div class="container">
         <h2 class="section-title">Про мене</h2>
@@ -91,7 +86,6 @@
       </div>
     </section>
 
-    <!-- Education Section -->
     <section id="education" class="section">
       <div class="container">
         <h2 class="section-title">Освіта та кваліфікація</h2>
@@ -139,7 +133,6 @@
       </div>
     </section>
 
-    <!-- Modal for diplomas -->
     <div id="diploma-modal" class="modal" aria-hidden="true">
       <div class="modal-content">
         <span class="close-btn" aria-label="Close">&times;</span>
@@ -147,7 +140,6 @@
       </div>
     </div>
 
-    <!-- Consultation Section -->
     <section id="services" class="section">
       <div class="container">
         <h2 class="section-title">Консультація та умови співпраці</h2>
@@ -177,7 +169,14 @@
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <div id="blog-modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body-blog">
+            </div>
+        </div>
+    </div>
+
     <section id="faq" class="section">
       <div class="container">
         <h2 class="section-title">Поширені запитання (FAQ)</h2>
@@ -240,7 +239,6 @@
       </div>
     </section>
 
-    <!-- Blog Section -->
     <section id="blog" class="section">
       <div class="container">
         <h2 class="section-title">Блог / Корисні матеріали</h2>
@@ -269,46 +267,41 @@
       </div>
     </section>
 
-    <!-- Modal for blog posts -->
     <div id="blog-modal" class="modal" aria-hidden="true">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <div class="modal-body-blog">
-                <!-- Dynamic content will be loaded here -->
             </div>
         </div>
     </div>
 
-    <!-- Appointment Section (New) -->
     <section id="appointment" class="section">
         <div class="container">
             <h2 class="section-title">Записатися на консультацію</h2>
             <div class="appointment-form-container">
-                <form id="appointment-form" class="appointment-form">
+                <form action="https://api.web3forms.com/submit" method="POST" class="appointment-form">
                     <p class="appointment-intro">Зробіть перший крок до змін. Заповніть форму, і я зв'яжусь з вами найближчим часом.</p>
+                    <input type="hidden" name="access_key" value="8e8037f8-6c96-4bfb-9fa8-fce3d540a124">
+                    <input type="hidden" name="redirect" value="https://vrsite.github.io/liudmila.psy/">
                     <div class="form-group">
-                        <label for="appointment-name">Ваше ім'я</label>
-                        <input type="text" id="appointment-name" name="name" placeholder="Ім'я" required>
+                        <label for="name">Ваше ім'я</label>
+                        <input type="text" id="name" name="name" placeholder="Ім'я" required>
                     </div>
                     <div class="form-group">
-                        <label for="appointment-email">Електронна пошта</label>
-                        <input type="email" id="appointment-email" name="email" placeholder="Електронна пошта" required>
+                        <label for="email">Електронна пошта</label>
+                        <input type="email" id="email" name="email" placeholder="Електронна пошта" required>
                     </div>
                     <div class="form-group">
-                        <label for="appointment-phone">Телефон</label>
-                        <input type="tel" id="appointment-phone" name="phone" placeholder="Телефон" required>
+                        <label for="message">Повідомлення</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Коротко опишіть ваш запит" required></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="appointment-message">Повідомлення</label>
-                        <textarea id="appointment-message" name="message" rows="4" placeholder="Коротко опишіть ваш запит"></textarea>
-                    </div>
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     <button type="submit" class="appointment-submit-btn">Відправити запит</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="section">
       <div class="container">
         <h2 class="section-title">Контакти</h2>
@@ -338,7 +331,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Людмила Свитко. Всі права захищені.</p>

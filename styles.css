@@ -713,7 +713,7 @@ a:hover { color: var(--hover-color); }
   }
   .hero-content {
     position: absolute;
-    top: 50%; /* Поднято выше */
+    top: 50%;
     transform: translateY(-50%); 
     left: 0.5rem;
     right: auto;

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Smooth scrolling for internal links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -7,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElement = document.querySelector(targetId);
       if (targetElement) targetElement.scrollIntoView({ behavior: 'smooth' });
 
-      // Закрыть мобильное меню после клика по ссылке
       const navLinks = document.querySelector('.nav-links');
       const hamburger = document.querySelector('.hamburger');
       if (navLinks.classList.contains('active')) {
@@ -29,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden';
     hamburger.setAttribute('aria-expanded', 'true');
 
-    // Управление табуляцией: активируем фокус внутри
     const focusables = getFocusableInDrawer();
     focusables.forEach(el => el.setAttribute('tabindex', '0'));
     if (focusables.length) focusables[0].focus();
@@ -41,13 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
     hamburger.setAttribute('aria-expanded', 'false');
 
-    // Отключаем фокусировку у элементов меню, когда оно скрыто
     const focusables = getFocusableInDrawer();
     focusables.forEach(el => el.setAttribute('tabindex', '-1'));
     hamburger.focus();
   };
 
-  // Изначально отключить фокус у пунктов меню (для мобильной логики)
   getFocusableInDrawer().forEach(el => el.setAttribute('tabindex', '-1'));
 
   if (hamburger && navLinks) {
@@ -56,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
       willOpen ? openDrawer() : closeDrawer();
     });
 
-    // Закрытие по клику вне панели
     document.addEventListener('click', (e) => {
       const clickedInside = navLinks.contains(e.target) || hamburger.contains(e.target);
       if (!clickedInside && navLinks.classList.contains('active')) {
@@ -64,14 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Esc закрывает меню
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navLinks.classList.contains('active')) {
         closeDrawer();
       }
     });
 
-    // Простейшая ловушка фокуса на Tab внутри панели
     document.addEventListener('keydown', (e) => {
       if (!navLinks.classList.contains('active')) return;
       if (e.key !== 'Tab') return;
@@ -92,14 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // FAQ accordion
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
     const answer = item.querySelector('.faq-answer');
 
     question.addEventListener('click', () => {
-      // Close others
       faqItems.forEach(otherItem => {
         if (otherItem !== item && otherItem.classList.contains('active')) {
           otherItem.classList.remove('active');
@@ -107,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Toggle current
       item.classList.toggle('active');
       if (item.classList.contains('active')) {
         answer.style.maxHeight = answer.scrollHeight + 'px';
@@ -117,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Hero intro animation
   const heroContent = document.querySelector('.hero-content');
   if (heroContent) {
     heroContent.style.opacity = '0';
@@ -129,15 +117,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
   }
 
-  // Carousel
   const carouselTrack = document.querySelector('.carousel-track');
   const carouselPrev = document.querySelector('.carousel-prev');
   const carouselNext = document.querySelector('.carousel-next');
 
   if (carouselTrack && carouselPrev && carouselNext) {
     let scrollPosition = 0;
-    const cardWidth = 300; // card width
-    const gap = 32; // 2rem
+    const cardWidth = 300;
+    const gap = 32;
     const totalWidth = carouselTrack.scrollWidth;
 
     carouselNext.addEventListener('click', () => {
@@ -161,13 +148,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Blog modal functionality
   const blogButtons = document.querySelectorAll('.read-more-btn');
   const blogModal = document.getElementById('blog-modal');
   const blogModalContent = document.querySelector('#blog-modal .modal-body-blog');
   const blogCloseBtn = blogModal.querySelector('.close-btn');
 
-  // Data for blog posts
   const blogData = {
       1: {
           title: "Тревога: як повернути собі контроль над життям. 3 ефективні техніки КПТ",
@@ -267,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <button class="cta-button-blog-modal">Записатися на консультацію</button>
           `;
           blogModal.style.display = "block";
-          document.body.style.overflow = "hidden"; // Prevents background scrolling
+          document.body.style.overflow = "hidden";
 
           const ctaBlogModal = blogModalContent.querySelector('.cta-button-blog-modal');
           if (ctaBlogModal) {
@@ -297,13 +282,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // Diplomas modal
   const diplomaCards = document.querySelectorAll('.diploma-card');
   const modal = document.getElementById('diploma-modal');
   const modalContent = document.querySelector('#diploma-modal .modal-body');
   const closeBtn = document.querySelector('.close-btn');
   
-  // Data for diplomas (from HTML, but can be managed here)
   const diplomasData = {
       1: {
           title: "Диплом магістра",
@@ -380,7 +363,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// Animation for the list items
 const issuesListObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -388,16 +370,15 @@ const issuesListObserver = new IntersectionObserver((entries, observer) => {
       listItems.forEach((item, index) => {
         setTimeout(() => {
           item.classList.add('is-visible');
-        }, index * 100); // delay each item by 100ms
+        }, index * 100);
       });
-      // Stop observing after the animation has run once
       observer.unobserve(entry.target);
     }
   });
 }, {
-  root: null, // viewport
+  root: null,
   rootMargin: '0px',
-  threshold: 0.2 // Trigger when 20% of the element is visible
+  threshold: 0.2
 });
 
 const issuesList = document.querySelector('.animated-issues-list');
