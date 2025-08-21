@@ -123,7 +123,7 @@ a:hover { color: var(--hover-color); }
 
 .hero {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -132,7 +132,7 @@ a:hover { color: var(--hover-color); }
   background-image: url('images/fonhero.jpg');
   background-size: cover;
   background-attachment: fixed; 
-  background-position: center 20%;
+  background-position: center 17%;
 }
 .hero::before {
   content: '';
